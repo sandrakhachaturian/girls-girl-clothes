@@ -1,0 +1,563 @@
+@font-face {
+  font-family: 'Unidbase Font 1';
+  src: url(fonts/UF1.ttf) format('opentype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Usually';
+  src: url('fonts/Usually-font-Bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+body {
+  background-color: #0c1117;
+  color: white;
+  font-family: "Alumni Sans", serif;
+  margin: 0;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+.h2 {
+  color: #fff;
+  text-align: right;
+}
+
+
+.main_container {
+  width: 100%;
+  max-width: 1920px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 55px;
+  padding-right: 55px;
+}
+
+/*Хедер*/
+
+.site_header {
+  z-index: 10;
+  width: 100%;
+  background-color: #0E141C;
+  display: flex;
+  align-items: right;
+  position: fixed;
+  top: 0;
+  transition: height 1s ease-in-out;
+  height: 85px;
+}
+
+.logo_header {
+  display: flex;
+}
+
+.navigation_container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo_name {
+  align-self: center;
+  font-family: "Alumni Sans", serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  padding-left: 2px;
+  text-decoration: none;
+  color: #fff;
+}
+
+.link {
+  align-self: center;
+  font-family: "Alumni Sans", serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  text-decoration: none;
+  padding-left: 20px;
+  color: #fff;
+  transition: color .2s linear;
+
+}
+
+.current {
+  text-decoration: underline;
+  color: #D1C12B
+}
+
+.link:hover {
+  color: #d3cc87;
+}
+
+/*Основная страница*/
+/*Имя бренда*/
+
+.hero {
+  background-color: #0c1117;
+  background-size: cover;
+  margin-top: 44px;
+  padding-top: 15%;
+  padding-bottom: 15%;
+}
+
+.brand_name {
+  font-family: "Alumni Sans", serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 64px;
+  line-height: 68px;
+  text-align: center;
+  color: #fff;
+}
+
+.main_title {
+  font-family: "Alumni Sans", serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 130px;
+  line-height: 140px;
+  text-align: center;
+  color: #fff;
+}
+
+.catalog_button {
+  margin-top: 40px;
+  padding-left: 70%;
+  padding-right: 15%;
+  display: flex;
+}
+
+/*Карусель*/
+
+.carousel-section {
+  padding: 60px 40px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.carousel-section h2 {
+  font-size: 42px;
+  font-weight: normal;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.carousel {
+  position: relative;
+}
+
+.carousel img {
+  width: 100%;
+  display: block;
+  border-radius: 4px;
+}
+
+.catalog-button {
+  position: absolute;
+  bottom: 20px;
+  right: 30px;
+  background: transparent;
+  border: 1px solid white;
+  padding: 6px 16px;
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+  border-radius: 20px;
+  letter-spacing: 1px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.catalog-button:hover {
+  background: white;
+  color: #0c1117;
+}
+
+.pagination {
+  position: absolute;
+  bottom: 16px;
+  left: 30px;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.dot {
+  width: 40px;
+  height: 2px;
+  background-color: #555;
+  display: inline-block;
+}
+
+.dot.active {
+  background-color: white;
+}
+
+.arrow-right {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  font-size: 22px;
+  color: white;
+  padding-left: 12px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.arrow-right:hover {
+  transform: translateX(5px);
+}
+
+/*Карточки*/
+
+.catalog {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  background-color: #151b22;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 200px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  z-index: 1;
+}
+
+.card img {
+  width: 100%;
+  display: block;
+}
+
+.info {
+  padding: 12px;
+  font-size: 18px;
+}
+
+.info h3 {
+  font-family: "Alumni Sans", serif;
+  margin: 0 0 10px;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+}
+
+button {
+  background: none;
+  font-family: "Alumni Sans", serif;
+  border: 1px solid white;
+  color: white;
+  padding: 2px 8px;
+  font-size: 15px;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: white;
+  color: #0c1117;
+}
+
+span {
+  font-size: 16px;
+}
+
+.more {
+  margin-top: 40px;
+}
+
+.more a {
+  color: white;
+  letter-spacing: 2px;
+  text-decoration: none;
+  font-size: 16px;
+  border-bottom: 1px solid white;
+  padding-bottom: 2px;
+}
+
+.more a:hover {
+  opacity: 0.7;
+}
+
+/*Карта*/
+
+.contact-section {
+  padding: 60px 40px;
+  max-width: 1200px;
+  margin: auto;
+  color: white;
+}
+
+.contact-section h2 {
+  font-weight: normal;
+  font-size: 42px;
+  letter-spacing: 2px;
+  margin-bottom: 40px;
+}
+
+.contact-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.map iframe {
+  width: 600px;
+  height: 350px;
+  border: 0;
+  filter: grayscale(100%) contrast(1.2);
+  border-radius: 4px;
+}
+
+.contact-info {
+  min-width: 250px;
+}
+
+.contact-info .phone,
+.contact-info .email {
+  font-size: 16px;
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+
+.contact-info .socials a {
+  margin-right: 10px;
+}
+
+.contact-info .socials img {
+  width: 20px;
+  height: 20px;
+  filter: brightness(200%);
+  transition: opacity 0.3s;
+}
+
+.contact-info .socials img:hover {
+  opacity: 0.6;
+}
+
+/*Футер*/
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 40px;
+  color: white;
+  background-color: #0c1117;
+  font-size: 16px;
+  flex-wrap: wrap;
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-left p,
+.footer-center p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.footer-right a {
+  margin-right: 10px;
+}
+
+.footer-right img {
+  width: 16px;
+  height: 16px;
+  filter: brightness(200%);
+}
+
+.text {
+  width: 540px;
+  height: 74px;
+  margin: 0 auto;
+  color: #fff;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+/*Страница "Коллекции"*/
+/*Каталог*/
+
+.catalog-section {
+  display: flex;
+  gap: 2rem;
+  background: #0c1117;
+  padding: 4rem;
+  color: white;
+  position: relative;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.catalog-header {
+  width: 20%;
+  position: relative;
+}
+
+.catalog-bg-text {
+  font-family: 'Usually', sans-serif;
+  font-size: 8rem;
+  color: #ffffff08;
+  position: absolute;
+  top: 0;
+  left: 0;
+  line-height: 1;
+  z-index: 0;
+}
+
+.catalog-menu ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 10rem;
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
+.catalog-menu li {
+  margin-bottom: 1rem;
+  opacity: 0.8;
+}
+
+.catalog-menu li.active {
+  color: #ffffff;
+  font-weight: bold;
+  opacity: 1;
+  position: relative;
+}
+
+.catalog-menu li.active .arrow {
+  position: absolute;
+  left: -1.5rem;
+  color: #cebe97;
+}
+
+.color-filters {
+  display: flex;
+  gap: 0.7rem;
+  margin-top: 2rem;
+}
+
+.color {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: inline-block;
+  border: 2px solid white;
+}
+
+.margin10 {
+  margin-top: 10%;
+}
+
+.color.white {
+  background: #ffffff;
+}
+
+.color.purple {
+  background: #800080;
+}
+
+.color.green {
+  background: #008000;
+}
+
+.color.yellow {
+  background: #ffff00;
+}
+
+/*Страница "О нас"*/
+
+.about-section, .contact-section, .carousel-section{
+  position: relative;
+  padding: 80px 10%;
+  overflow: hidden;
+}
+
+.about-title,
+.contact-title,
+.carousel-title {
+  font-family: 'Unidbase font 1', sans-serif;
+  font-size: 3rem;
+  letter-spacing: 0.1em;
+  position: relative;
+  z-index: 2;
+}
+
+.about-bg-text,
+.contact-bg-text,
+.carousel-bg-text {
+  font-family: 'Usually', sans-serif;
+  font-size: 7rem;
+  color: rgba(255, 255, 255, 0.05);
+  position: absolute;
+  top: 30px;
+  left: 10%;
+  z-index: 1;
+  white-space: nowrap;
+}
+
+.about-text {
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  line-height: 1.6;
+  margin-top: 30px;
+  max-width: 900px;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 2;
+}
+
+.about-gallery {
+  display: flex;
+  gap: 30px;
+  margin-top: 40px;
+  position: relative;
+  z-index: 2;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.about-gallery img {
+  width: 220px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
